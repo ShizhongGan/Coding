@@ -1,1 +1,4 @@
 ## 每周复现一个方法/算法。。。。。 还没想好
+
+|[Gaussian Mixture Models](./gmm.md)|
+||
