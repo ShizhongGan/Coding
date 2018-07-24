@@ -2,7 +2,7 @@
 
 ## 基础篇 10分钟快速了解pandas
 
-''' markdown
+''' python
 improt pandas as pd # 导入pandas 库
 '''
 
