@@ -23,8 +23,46 @@ df2 =pd.DataFrame({某个字典数据})
 # DataFrame数据的调用
 df.head() #读取前几行
 df.tail() #读取末尾几行
-df.index 
-df.c
+df.index  #行指标（时间戳）
+df.columns # 读取列指标（序列名）
+df.values  # 读取数据
+df.describe() #描述数据的每个指标的基本统计特征
+df.sort_index(axis=1, ascending=False) # 按照列指标降序排列 axis=0表示行
+df.sort_values(by='B')  #按照某指标数值排列
 
+# DataFrame Selection 数值调用，文档建议按照numpy方式读取
+df['A'] # 按照指标名读取某一列
+df[0:3] # 读取前三行
+df['20130102':'20130104'] # 按时间戳读取某些行
+df.loc['20130102':'20130104',['A','B']] # .loc是numpy的数据读取方法，可以按照标行列签进行数据读取
+df.iloc[[1,2,4],0:2] # .iloc是numpy的数据读取方法，只按照数据的所在位置进行数据读取
+
+# Boolean indexing 通过判断读取数据
+df[df.A>0] # 通过某一列指标判断读取数据
+df[df>0] # 通过整体判断，输出为df整体，不符合的显示为NAN
+df[df.isin('NaN') # 判断是否有NAN值
+
+# 缺失值
+df.reindex(index=[],columns=[]) #更改index
+df.dropna(how='any') # 删除含有NaN值的row 
+df.fillna(value=5) #填充NAN的值为5
+df.isna(df) # 判断是否存在nan
+
+# 基本操作
+# 通过函数对数据进行操作
+df.apply(某个function) 对列数据累加 
+df.apply(lambada x: x.max() - x.min()) 
+# 统计直方图
+s.value_counts() #序列操作
+# 字符串操作
+s.str.lower() #字符串全部变成小写
+
+# 合并
 ```
-
+                   A         B         C  D    F
+2013-01-01  0.000000  0.000000 -1.509059  5  NaN
+2013-01-02  1.212112 -0.173215  0.119209  5  1.0
+2013-01-03 -0.861849 -2.104569 -0.494929  5  2.0
+2013-01-04  0.721555 -0.706771 -1.039575  5  3.0
+2013-01-05 -0.424972  0.567020  0.276232  5  4.0
+2013-01-06 -0.673690  0.113648 -1.478427  5  5.0
