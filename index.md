@@ -1,5 +1,6 @@
-## 每周复现一个方法/算法。。。。。 还没想好
+## 每周系统的学习一个新知识
 
-|[Gaussian Mixture Models](./gmm.md)|
-|-----------------------------------|
-||
+|List||
+|------------------------------------------------------------|
+|[python pandas tutorial note](./pandastutorial.md)                     |
+|[Gaussian Mixture Models](./gmm.md)                          |
