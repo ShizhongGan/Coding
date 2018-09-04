@@ -7,11 +7,10 @@ SELECT *            # 查询全部列
 FROM mytable;
 ```
 
-[//]:<>(Select query with constraints) 
+
 
 #### Queries with constraints
-```
-
+```sql
 SELECT column, another_column, …
 FROM mytable
 WHERE condition
