@@ -15,6 +15,7 @@ WHERE condition
     AND/OR another_condition
     AND/OR …;
 ```
+
 |Operator|	Condition|	SQL Example|
 |=, !=, < <=, >, >=	|Standard numerical operators|	col_name != 4|
 |BETWEEN … AND …|	Number is within range of two values (inclusive)|	col_name BETWEEN 1.5 AND 10.5|
