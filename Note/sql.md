@@ -1,4 +1,4 @@
-* SELECT queries
+* SELECT queries 
 ```
 SELECT column, another_column, …          # 查询某行
 FROM mytable;
