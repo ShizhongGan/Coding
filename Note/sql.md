@@ -6,4 +6,5 @@ FROM mytable;
 SELECT *            # 查询全部列
 FROM mytable;
 ```
+
 ** Queries with constraints
