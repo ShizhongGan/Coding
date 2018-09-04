@@ -6,10 +6,10 @@ FROM mytable;
 SELECT *            # 查询全部列
 FROM mytable;
 ```
-
+[]:<>() Select query with constraints
 #### Queries with constraints
 ```
-[]: Select query with constraints
+
 SELECT column, another_column, …
 FROM mytable
 WHERE condition
