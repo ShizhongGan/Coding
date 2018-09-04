@@ -7,7 +7,7 @@ SELECT *            # 查询全部列
 FROM mytable;
 ```
 
-#### Queries with constraints
+### Queries with constraints
 ```sql
 SELECT column, another_column, …
 FROM mytable
@@ -33,3 +33,21 @@ WHERE condition
 |IN (…)|	String exists in a list	col_name| IN ("A", "B", "C")|
 |NOT IN (…)	|String does not exist in a list	|col_name NOT IN ("D", "E", "F")|
 
+### Filtering and sorting Query results
+```sql
+# DISTINCT 删除重复行
+SELECT DISTINCT column, another_column, … 
+FROM mytable
+WHERE condition(s);
+# ORDER BY选择具有有序结果的查询
+SELECT column, another_column, …
+FROM mytable
+WHERE condition(s)
+ORDER BY column ASC/DESC;
+# LIMIT和OFFSET子句 选择有限行的查询
+SELECT column, another_column, …
+FROM mytable
+WHERE condition(s)
+ORDER BY column ASC/DESC
+LIMIT num_limit OFFSET num_offset;
+```
